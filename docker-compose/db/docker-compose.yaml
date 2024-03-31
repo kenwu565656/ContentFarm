@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  db:
+    image: gvenzl/oracle-xe
+    environment:
+      - ORACLE_PASSWORD=top_secret
+      - APP_USER=test
+      - APP_USER_PASSWORD=test
+    volumes:
+      - db-data:/var/lib/oracle/data
+    ports:
+      - "1521:1521"
+    container_name: content_farm_db_oracle
+    restart: on-failure
+volumes:
+  db-data:
+  pgadmin-data:

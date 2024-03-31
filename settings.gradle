@@ -1,1 +1,5 @@
 rootProject.name = 'contentFarm'
+include ':contentfarm-pojos'
+project(':contentfarm-pojos').projectDir = new File(settingsDir, "../contentfarm-pojos");
+//include ':contentfarm-utils'
+//project(':contentfarm-utils').projectDir = new File(settingsDir, "../contentfarm-utils");
